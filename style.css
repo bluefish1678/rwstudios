@@ -96,7 +96,36 @@ li a:hover {
 
 .jumbotron {
   padding: 60px 60px 60px 120px;
+  font-size: 33.5px;
 }
 .typing {
   font-size: 33.5px;
+}
+
+#container {
+	text-align: center;
+}
+
+#text {
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+}
+
+#cursor {
+	display: inline-block;
+	vertical-align: middle;
+	width: 3px;
+	height: 30px;
+	background-color: skyblue;
+	animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+	from, to { 
+		background-color: transparent 
+	}
+	50% { 
+		background-color: skyblue; 
+	}
 }

@@ -1,6 +1,8 @@
 // List of sentences
 var _CONTENT = [
   "Helpful tools for the community.",
+    "Discord Moderator and Programmer Job finder.",
+
   "A botlist.",
   "A Q/A platform (COMING SOON).",
   "Happiness and Joy. ",

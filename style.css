@@ -36,7 +36,7 @@ h1.title {
   font-family: "Poppins", sans-serif;
   opacity: 1;
   font-weight: 600;
-  font-size: 23px;
+  font-size: 20px;
   align-items: center;
 }
 
@@ -149,7 +149,7 @@ font-weight:900;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -5px;}
+.row {margin: 0 50px;}
 
 /* Clear floats after the columns */
 .row:after {
@@ -169,8 +169,21 @@ font-weight:900;
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  text-align: center;
+  	box-shadow: 0 0 2px 1px lightgrey;
+
+/* border: 2px solid white; */
+  padding:15px 20px;
+  width: 80%;
+  height: 140px;
+  border-radius:10px;
+  text-align: left;
+  cursor:pointer;
   background-color: #22272e;
 }
+
+.card:hover {
+  transition: .4s;
+        transform: scale(1.15);
+       
+ box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+        z-index: 3;    }

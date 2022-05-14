@@ -1,6 +1,6 @@
 @font-face {
     font-family: "gey";
-    src: url(https://cdn.glitch.global/fd0ae991-8ea6-449c-ade0-d3d31e89b096/ginto-nord.2134ecd.woff?v=1652544127131);
+    src: url(https://cdn.glitch.global/fd0ae991-8ea6-449c-ade0-d3d31e89b096/ginto-nord.2134ecd.woff)  format("woff");
     font-style: normal;
     font-display: swap;
 }

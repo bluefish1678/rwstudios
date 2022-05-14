@@ -1,11 +1,13 @@
-@font-face {
-    font-family: "gey";
-    src: url(https://cdn.glitch.global/fd0ae991-8ea6-449c-ade0-d3d31e89b096/ginto-nord.2134ecd.woff)  format("woff");
-    font-style: normal;
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body{
   background-color: #22272e;
   color: white;
-  font-family: gey;
+ font-family: 'Poppins', sans-serif;
+}
+.box1{
+  padding: 33.5px 0px;
+  
+}
+h1.title{
+  font-size: 50px;
 }

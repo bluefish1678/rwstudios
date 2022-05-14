@@ -1,9 +1,9 @@
 // List of sentences
 var _CONTENT = [
-  "Twinkle, twinkle, little star",
-  "How I wonder what you are",
-  "Up above the world so high",
-  "Like a diamond in the sky",
+  "Helpful tools for the community.",
+  "A botlist.",
+  "A Q/A platform (COMING SOON).",
+  "Happiness and Joy. ",
 ];
 
 // Current sentence being processed

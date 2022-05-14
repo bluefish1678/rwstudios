@@ -35,7 +35,7 @@ h1.title {
   font-family: "Poppins", sans-serif;
   opacity: 1;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 23px;
   align-items: center;
 }
 
@@ -77,9 +77,9 @@ li {
 
 li a {
   display: block;
-    color: #c8d4da;
+  color: #c8d4da;
 
-margin: 0px 30px;
+  margin: 0px 30px;
   float: right;
 
   text-align: center;
@@ -92,9 +92,11 @@ li a:hover {
   transition: 0.3s;
   opacity: 1;
   float: right;
-
 }
 
-.jumbotron{
+.jumbotron {
   padding: 60px 60px 60px 120px;
+}
+.typing {
+  font-size: 33.5px;
 }

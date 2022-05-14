@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
 body{
   background-color: #22272e;
   color: white;
  font-family: 'Poppins', sans-serif;
 }
 .box1{
-  padding: 33.5px 0px;
+  margin: 60px 60px 60px 120px;
   
 }
 h1.title{
   font-size: 50px;
 }
+#title{
+  width:200px;
+}
+/* navbar bg=2d333b */ 

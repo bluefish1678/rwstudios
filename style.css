@@ -188,3 +188,26 @@ font-weight:900;
        
  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
         z-index: 3;    }
+
+
+        .alert {
+          padding: 20px;
+          background-color: #f44336;
+          color: white;
+        }
+        
+        .closebtn {
+          margin-left: 15px;
+          color: white;
+          font-weight: bold;
+          float: right;
+          font-size: 22px;
+          line-height: 20px;
+          cursor: pointer;
+          transition: 0.3s;
+        }
+        
+        .closebtn:hover {
+          color: black;
+        }
+        .alert.info {background-color: #ffaa2c;}

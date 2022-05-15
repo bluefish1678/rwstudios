@@ -211,3 +211,8 @@ font-weight:900;
           color: black;
         }
         .alert.info {background-color: #ffaa2c;}
+        @media (max-width: 767px) { 
+          .nav{
+              display:none;
+          }
+      }

@@ -1,3 +1,5 @@
+
+
 // List of sentences
 var _CONTENT = [
   "Helpful tools for the community.",

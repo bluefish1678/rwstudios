@@ -21,6 +21,8 @@ body {
 }
 
 .logo img {
+  pointer-events: none;
+
   width: 50px;
   border-radius: 100px;
   /*   height: 200px; */
@@ -39,10 +41,8 @@ h1.title {
 
 /* navbar bg=2d333b */
 span {
-  background-image: var(--grad);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+
+  color: #4279fe;
   font-family: 'Rubik', sans-serif;
     display: flex;
   margin: 9px;
@@ -169,19 +169,44 @@ font-weight:900;
 .card {
   	/* box-shadow: 0 0 2px 1px lightgrey; */
 
-border: 1px solid black;
-  padding:15px 20px;
-  width: 80%;
-  height: 140px;
+border: 1px solid transparent;
+  padding:10px 20px;
+  width: 97%;
+  height: 300px;
   border-radius:10px;
-  text-align: left;
+  text-align: center;
   cursor:pointer;
-  background-color: #ff004e;
+  background-color: #0d1117;
 }
+p{
+  font-weight:0;
+}
+.card p{
+  padding: 5px 0px;
+}
+.card a{
+  background-color: #c9d1d9;
+  padding: 5px 10px;
+  border:none;
+  background-color: #4279fe;
+  border-radius: 15px;
+  text-decoration:none;
+  color: initial;
+}
+.card h3{
+  padding: 5px 0px;
 
+}
+.card img{
+  border-radius: 50%;
+  width: 75px;
+  pointer-events: none;
+
+  border: 3px solid white;
+}
 .card:hover {
   transition: .4s;
-        transform: scale(1.15);
+        transform: scale(1.09);
        
  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
         z-index: 3;    }
@@ -216,3 +241,7 @@ border: 1px solid black;
 
 
 
+.h2{
+  font-size: inherit;
+  color:#c9d1d9;
+}

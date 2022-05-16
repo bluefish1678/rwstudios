@@ -167,16 +167,16 @@ font-weight:900;
 
 /* Style the counter cards */
 .card {
-  	box-shadow: 0 0 2px 1px lightgrey;
+  	/* box-shadow: 0 0 2px 1px lightgrey; */
 
-/* border: 2px solid white; */
+border: 1px solid black;
   padding:15px 20px;
   width: 80%;
   height: 140px;
   border-radius:10px;
   text-align: left;
   cursor:pointer;
-  background-color: #22272e;
+  background-color: #ff004e;
 }
 
 .card:hover {

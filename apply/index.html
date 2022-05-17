@@ -83,7 +83,7 @@
       <br /><br />
       <br />
       <div class="mb-3">
-        <label for="nameInput" class="form-label">Enter your name</label>
+        <label for="nameInput" class="form-label">Enter your First Name</label>
         <input type="name" class="form-control" id="nameInput" />
       </div>
       <div class="mb-3">
@@ -94,7 +94,8 @@
       </div>
       <div class="mb-3">
         <label for="joinReason" class="form-label"
-          >Explain why you want to join DSCDEVSTUDIOS? (2-3 sentences min.)</label
+          >Explain why you want to join DSCDEVSTUDIOS? (2-3 sentences
+          min.)</label
         >
         <textarea class="form-control" id="joinReason" rows="3"></textarea>
       </div>
@@ -103,6 +104,29 @@
           >Why do you stand out from others? (1-2 sentences min.)</label
         >
         <textarea class="form-control" id="joinReason2" rows="2"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="prevExperince" class="form-label"
+          >Have you had any experience with the position you are applying for.
+          If so, please state where you did.
+        </label>
+        <textarea class="form-control" id="prevExperince" rows="1"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="ifNuke" class="form-label">
+          What would you do in the event of a server raid/nuke. (2 sentance
+          minimum) . <font color="red"><b> ONLY FOR MODERATOR/ADMIN APPLICATION</b></font>
+        </label>
+        <textarea class="form-control" id="ifNuke" rows="1"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="betterPlace" class="form-label">
+          How can you make Discord Developer Studios a better place? (3 sentence
+          minimum)
+        </label>
+        <textarea class="form-control" id="betterPlace" rows="1"></textarea>
       </div>
       <button type="submit" class="btn btn-primary" id="submit">Submit</button>
     </form>
@@ -126,52 +150,61 @@
           if (ele[i].checked) {
             document.getElementById("result").innerHTML =
               "<b style='color:red;'>Selected Position:</b> " + ele[i].value;
-              const applyPosition = ele[i].value;
-              const senderName = document.getElementById("nameInput").value;
-              const discordName = document.getElementById("discordInput").value;
-              const joinReason = document.getElementById("joinReason").value;
-              const joinReason2 = document.getElementById("joinReason2").value;
+            const applyPosition = ele[i].value;
+            const senderName = document.getElementById("nameInput").value;
+            const discordName = document.getElementById("discordInput").value;
+            const joinReason = document.getElementById("joinReason").value;
+            const joinReason2 = document.getElementById("joinReason2").value;
+            const prevExperince =
+              document.getElementById("prevExperince").value;
+            const ifNuke = document.getElementById("ifNuke").value;
+            const betterPlace = document.getElementById("betterPlace").value;
 
-        const webhookBody = {
-          embeds: [
-            {
-              title: "Contact Form Submitted",
-              fields: [
-                { name: "Coming From: ", value: senderName },
-                { name: "Discord Username: ", value: discordName },
+            const webhookBody = {
+              embeds: [
+                {
+                  title: "Contact Form Submitted",
+                  fields: [
+                    { name: "Coming From: ", value: senderName },
+                    { name: "Discord Username: ", value: discordName },
 
-                { name: "Applying For: ", value: applyPosition },
-                                { name: "Reason to join?: ", value: joinReason },
-                                { name: "Why they stand out: ", value: joinReason2 },
+                    { name: "Applying For: ", value: applyPosition },
+                    { name: "Reason to join?: ", value: joinReason },
+                    { name: "Why they stand out: ", value: joinReason2 },
+                    { name: "Previous Experince: ", value: prevExperince },
 
+                    {
+                      name: "What would they do if we got raided/nuked? ",
+                      value: ifNuke,
+                    },
 
-
+                    {
+                      name: "How would they make DDS a better place? ",
+                      value: betterPlace,
+                    },
+                  ],
+                },
               ],
-            },
-          ],
-        };
+            };
 
-        const webhookUrl =
-          "https://discord.com/api/webhooks/976214597059112990/RtJVtgmluB6DF8Vz4qmZUn-LOLec13BfZvMD2RKXiW73hrVkOTNkDnMEGYv9dulyiI7J";
+            const webhookUrl =
+              "https://discord.com/api/webhooks/976214597059112990/RtJVtgmluB6DF8Vz4qmZUn-LOLec13BfZvMD2RKXiW73hrVkOTNkDnMEGYv9dulyiI7J";
 
-        const response = await fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(webhookBody),
-        });
+            const response = await fetch(webhookUrl, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(webhookBody),
+            });
 
-        if (response.ok) {
-          window.location.replace('/submitted.html')
-
-        } else {
-          // alert("There was an error! Try again later!");
-        }
+            if (response.ok) {
+              window.location.replace("/submitted.html");
+            } else {
+              // alert("There was an error! Try again later!");
+            }
           }
         }
-
-        
       }
     </script>
   </body>

@@ -7,7 +7,8 @@
 body {
   background-color: #1c2128;
   color: white;
-  font-family: 'Rubik', sans-serif;}
+  font-family: 'Rubik', sans-serif;
+}
 
 * {
   margin: 0px;
@@ -19,6 +20,7 @@ body {
   margin: 0;
   padding: 5px;
 }
+
 
 .logo img {
   pointer-events: none;

@@ -1,11 +1,13 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;  box-sizing: border-box;
+  box-sizing: border-box;
+  box-sizing: border-box;
 
 }
+
 body {
-  background-color: #230a19;
+  background-color: #0b0611;
   color: white;
   font-family: 'Rubik', sans-serif;
 }
@@ -15,10 +17,11 @@ body {
   padding: 0px;
   box-sizing: border-box;
 }
+
 .nav {
   /* background-color: #201e28; */
   margin: 0;
-  border-bottom: 1px solid gray;
+  margin-top: 10px;
   padding: 5px;
 }
 
@@ -36,7 +39,8 @@ body {
 h1.title {
   display: flex;
 
-  font-family: 'Rubik', sans-serif;  opacity: 1;
+  font-family: 'Rubik', sans-serif;
+  opacity: 1;
   font-weight: 600;
   font-size: 20px;
   align-items: center;
@@ -45,27 +49,27 @@ h1.title {
 /* navbar bg=2d333b */
 span {
 
-  color: #7289DA;
+  color: white;
   font-family: 'Rubik', sans-serif;
-    display: flex;
+  display: flex;
   margin: 9px;
-    font-weight:800;
+  font-weight: 200;
 
   background-size: 100%;
   /* gradient */
 }
+
 :root {
-  --grad: linear-gradient(
-    45deg,
-    #845ec2,
-    #d65db1,
-    #ff6f91,
-    #ff9671,
-    #ffc75f,
-    #f9f871,
-    red
-  );
+  --grad: linear-gradient(45deg,
+      #845ec2,
+      #d65db1,
+      #ff6f91,
+      #ff9671,
+      #ffc75f,
+      #f9f871,
+      red);
 }
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -84,7 +88,7 @@ li a {
 
   margin: 0px 30px;
   float: left;
-opacity:1;
+  opacity: 1;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -95,67 +99,88 @@ li a:hover {
   transition: 0.3s;
   opacity: 1;
   float: right;
-  color:white;
+  color: white;
+}
+
+.jumbotitle {
+  font-weight: 300;
+  font-size: 45px;
 }
 
 .jumbotron {
-  margin: 60px 60px 60px 120px;
-  font-size: inherit;
-    font-size: 45px;
+  margin: 60px 160px 60px 120px;
+
 
 }
-.joinbutton{
-  background-color:#7289DA;
-  padding:10px;
+
+.social {
+  color: #7289DA;
+  font-size: 20px;
+}
+
+.social:hover {
+  color: #d9534f;
+}
+
+.joinbutton {
+  background-color: #7289DA;
+  padding: 10px;
   text-decoration: none;
   font-size: 16px;
-  color:white;
+  color: white;
   border-radius: 15px;
 }
-.joinbutton:hover{
+
+.joinbutton:hover {
   transition: 0.4s;
-  background-color:white;
-  color:black;
+  background-color: white;
+  color: black;
 }
-p{
-  color:#9ca3af;
+
+p {
+  color: #9ca3af;
 }
-.subTitle{
-    font-size: 25px;
-color:white;
+
+.subTitle {
+  font-size: 25px;
+  color: white;
 }
+
 .typing {
   font-size: 33.5px;
 }
 
 #container {
-	text-align: center;
+  text-align: center;
 }
 
 #text {
-	display: inline-block;
-	vertical-align: middle;
-	color: white;
-  font-weight:550;  
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+  font-weight: 550;
 
 }
 
 #cursor {
-	display: inline-block;
-	vertical-align: middle;
-	width: 3px;
-	height: 30px;
-	background-color: skyblue;
-	animation: blink .75s step-end infinite;
+  display: inline-block;
+  vertical-align: middle;
+  width: 3px;
+  height: 30px;
+  background-color: skyblue;
+  animation: blink .75s step-end infinite;
 }
 
 @keyframes blink {
-	from, to { 
-		background-color: transparent 
-	}
-	50% { 
-		background-color: skyblue; 
-	}
+
+  from,
+  to {
+    background-color: transparent
+  }
+
+  50% {
+    background-color: skyblue;
+  }
 }
 
 
@@ -167,13 +192,25 @@ color:white;
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 50px;}
+.row {
+  margin: 0 50px;
+}
 
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+a {
+  text-decoration: none;
+  color: #7289DA;
+}
+
+a:hover {
+  color: #d9534f;
+  text-decoration: underline;
 }
 
 /* Responsive columns */
@@ -184,88 +221,102 @@ color:white;
     margin-bottom: 20px;
   }
 }
-b{
+
+b {
   background-color: #14121c;
-  padding:0px 10px;  color:white;
+  padding: 0px 10px;
+  color: white;
   border-radius: 10px;
 }
+
 /* Style the counter cards */
 .card {
-  	/* box-shadow: 0 0 2px 1px lightgrey; */
+  /* box-shadow: 0 0 2px 1px lightgrey; */
 
-border: 1px solid transparent;
-  padding:10px 20px;
+  border: 1px solid transparent;
+  padding: 10px 20px;
   width: 97%;
   height: 300px;
-  border-radius:10px;
+  border-radius: 10px;
   text-align: center;
-  cursor:pointer;
+  cursor: pointer;
   background-color: #14121c;
 }
-p{
-  font-weight:0;
+
+p {
+  font-weight: 0;
 }
-.card p{
+
+.card p {
   padding: 5px 0px;
 }
-.card a{
+
+.card a {
   background-color: #c9d1d9;
   padding: 5px 10px;
-  border:none;
+  border: none;
   background-color: #7289DA;
   border-radius: 15px;
-  text-decoration:none;
+  text-decoration: none;
   color: initial;
 }
-.card h3{
+
+.card h3 {
   padding: 5px 0px;
 
 }
-.card img{
+
+.card img {
   border-radius: 50%;
   width: 75px;
   pointer-events: none;
 
   border: 3px solid white;
 }
+
 .card:hover {
   transition: .4s;
-        transform: scale(1.09);
-       
- box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
-        z-index: 3;    }
+  transform: scale(1.09);
+
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.4);
+  z-index: 3;
+}
 
 
-        .alert {
-          padding: 20px;
-          background-color: #f44336;
-          color: white;
-        }
-        
-        .closebtn {
-          margin-left: 15px;
-          color: white;
-          font-weight: bold;
-          float: right;
-          font-size: 22px;
-          line-height: 20px;
-          cursor: pointer;
-          transition: 0.3s;
-        }
-        
-        .closebtn:hover {
-          color: black;
-        }
-        .alert.info {background-color: #ffaa2c;}
-        @media (max-width: 767px) { 
-          .nav{
-              display:none;
-          }
-      }
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.alert.info {
+  background-color: #ffaa2c;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
 
 
 
-.h2{
+.h2 {
   font-size: inherit;
-  color:#c9d1d9;
+  color: #c9d1d9;
 }

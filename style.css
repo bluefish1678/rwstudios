@@ -296,7 +296,7 @@ b {
 /* Style the counter cards */
 .card {
   /* box-shadow: 0 0 2px 1px lightgrey; */
-
+  overflow-wrap: break-word;
   border: 1px solid transparent;
   padding: 35px 50px;
   width: auto;
@@ -338,6 +338,8 @@ b {
   text-decoration: none;
 }
 .card img {
+  object-fit: contain;
+
   border-radius: 250%;
   width: 100px;
   pointer-events: none;
@@ -372,10 +374,11 @@ b {
   background-color: #ffaa2c;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1300px) {
   .nav {
     display: none;
   }
+
 }
 
 

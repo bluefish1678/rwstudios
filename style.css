@@ -9,7 +9,8 @@
 }
 
 body {
-  background-color: #111111;
+  background-image: url('/bg.gif');
+  background-color: #181818;
   color: white;
   font-family: 'Montserrat', sans-serif;
 }
@@ -21,10 +22,8 @@ body {
 }
 
 .nav {
-  /* background-color: #201e28; */
-  margin: 0;
-  margin-top: 10px;
-  padding: 5px;
+  background-color: #23272a;
+padding:14px 0px;
 }
 
 
@@ -54,7 +53,7 @@ span {
   color: white;
   font-family: 'Montserrat', sans-serif;
   display: flex;
-  margin: 9px;
+  margin: 0px 18px;
   font-weight: 700;
 
   background-size: 100%;
@@ -108,13 +107,26 @@ li a:hover {
   font-weight: 500;
   font-size: 45px;
 }
+.jumbotron-header {
+background-color: #23272a;
+position: absolute;
+left: 0px;
+right: 0px;
+padding: 60px 160px 60px 120px;
+width:100%;
 
+}
 .jumbotron {
   margin: 60px 160px 60px 120px;
 
 
 }
-
+svg {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .social {
   color: #7289DA;
   font-size: 20px;

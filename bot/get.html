@@ -1,0 +1,176 @@
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet" />
+
+    </div>
+    </body>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <style>
+        * {
+            margin: 0px;
+
+        }
+
+        .applyimg {
+            pointer-events: none;
+
+            width: 50px;
+            border-radius: 100px;
+            /*   height: 200px; */
+            margin: 0 0 0 12px;
+            float: left;
+        }
+
+        #container {
+            background-color: #0d1117;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            padding: 32px 32px;
+            font-family: 'Rubik', sans-serif;
+
+            color: white;
+        }
+        label{
+            font-weight: 600;
+            color:#aaaaaa;
+        }
+    </style>
+
+</head>
+
+<body class="container mt-5" style="background-color: 23272a; ">
+    <div id="yum">
+        <img class="applyimg" src="../real-logo.png" class="logo" alt="LOGO" />
+        &nbsp;
+        <h1 style="display:inline; color:white; font-weight: 900;">
+            Discord Developer Studios Custom Bot Form
+        </h1>
+        <br /><br />
+        <form onsubmit="sendContact(event)">
+            <label class="form-label" ><b>Select your main command package... Dont worry you can add more specifc commands
+                    later</b></label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                    value="Moderation Commands" />
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Moderation Commands
+                </label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                    value="Fun commands" />
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Fun/Utlity Commands </label>
+            </div>
+           
+
+
+
+
+            <br />
+            <div class="mb-3">
+                <label for="nameInput" class="form-label">Enter your First Name</label>
+                <input type="name" class="form-control" id="nameInput" />
+            </div>
+            <div class="mb-3">
+                <label for="discordInput" class="form-label">Enter your discord username and TAG.. EXAMPLE:
+                    burple#001</label>
+                <input type="name" class="form-control" id="discordInput" />
+            </div>
+            <div class="mb-3">
+                <label for="extraCmds" class="form-label">Write any specfic commands/features you want beside the
+                    commands you chose above. Please explain in depth.</label>
+                <textarea class="form-control" id="extraCmds" rows="2"></textarea>
+            </div>
+
+            <br>
+            <p style="color:white; font-weight: 800;"><b>Make sure to join the discord server after submitting so our developers can contact you when you place a bot request.</b></p>
+            <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        </form>
+
+        <script>
+            function displayRadioValue() {
+                var ele = document.getElementsByName("flexRadioDefault");
+
+                for (i = 0; i < ele.length; i++) {
+                    if (ele[i].checked) {
+                  
+                    }
+                }
+            }
+            async function sendContact(ev) {
+                ev.preventDefault();
+                var ele = document.getElementsByName("flexRadioDefault");
+
+                for (i = 0; i < ele.length; i++) {
+                    if (ele[i].checked) {
+      
+                        const applyPosition = ele[i].value;
+                        const senderName = document.getElementById("nameInput").value;
+                        const discordName = document.getElementById("discordInput").value;
+                        const extraCmds = document.getElementById("extraCmds").value;
+                   
+                        const webhookBody = {
+                            embeds: [{
+                                title: "Bot Request Incoming!",
+                                description: "STAFF MAKE SURE TO CREATE A TICKET WITH THE USER AND COMMUNICATE WITH THEM",
+                                fields: [{
+                                        name: "First Name: ",
+                                        value: senderName
+                                    },
+                                    {
+                                        name: "Discord Username: ",
+                                        value: discordName
+                                    },
+
+                                    {
+                                        name: "What type of bot? ",
+                                        value: applyPosition
+                                    },
+                                 
+                                  
+                                    {
+                                        name: "Any Extra Commands?: ",
+                                        value: extraCmds
+                                    },
+                                    
+
+                                ],
+                            }, ],
+                        };
+
+                        const webhookUrl =
+                            "https://discord.com/api/webhooks/983895441160675328/DpL9XTxHl5sZaGUolInyccLblErkvEoI3LOuDsbl_q9erD2B-8BGuLSnJf7-8pn9iAoT";
+
+                        const response = await fetch(webhookUrl, {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify(webhookBody),
+                        });
+
+                        if (response.ok) {
+                            window.location.replace(
+                                "https://dscdevstudios.xyz/bot/submitted.html"
+                            );
+                        } else {
+                            // alert("There was an error! Try again later!");
+                        }
+                    }
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>

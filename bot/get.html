@@ -91,7 +91,10 @@
                     commands you chose above. Please explain in depth.</label>
                 <textarea class="form-control" id="extraCmds" rows="2"></textarea>
             </div>
-
+            <div class="mb-3">
+                <label for="extraCmds" class="form-label">What should the name of the bot be?.</label>
+                <textarea class="form-control" id="botName" rows="1"></textarea>
+            </div>
             <br>
             <p style="color:white; font-weight: 800;"><b>Make sure to join the discord server after submitting so our developers can contact you when you place a bot request.</b></p>
             <button type="submit" class="btn btn-primary" id="submit">Submit</button>
@@ -118,7 +121,8 @@
                         const senderName = document.getElementById("nameInput").value;
                         const discordName = document.getElementById("discordInput").value;
                         const extraCmds = document.getElementById("extraCmds").value;
-                   
+                        const botname = document.getElementById("botName").value;
+
                         const webhookBody = {
                             embeds: [{
                                 title: "Bot Request Incoming!",
@@ -142,7 +146,12 @@
                                         name: "Any Extra Commands?: ",
                                         value: extraCmds
                                     },
-                                    
+                                    {
+                                        name: "Bot Name: ",
+                                        value: botname
+                                    },
+                                   
+
 
                                 ],
                             }, ],
